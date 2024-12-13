@@ -106,7 +106,7 @@ import { W } from 'porto/wagmi'
 import { useConnectors } from 'wagmi'
 
 function Connect() {
-  const connect = W.useConnect()
+  const { mutate: connect } = W.useConnect()
   const connectors = useConnectors()
 
   return connectors?.map((connector) => (
